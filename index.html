@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claude Code Field Guide — Advice from Anthropic's official videos (past 6 weeks)</title>
+  <meta name="description" content="A synthesis of the advice from Claude Code videos and talks on Anthropic's official YouTube channels over the six weeks ending May 27, 2026 — anchored by Code with Claude 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Anthropic · Claude Code · past six weeks</span>
+      <h1>The Claude Code <span class="grad">Field Guide</span></h1>
+      <p class="lede">
+        Every Claude&nbsp;Code talk published on Anthropic's official YouTube channels in the six weeks ending
+        May&nbsp;27,&nbsp;2026 — distilled into the advice that actually changes how you work. The window is
+        dominated by <strong>Code&nbsp;with&nbsp;Claude&nbsp;2026</strong> (San&nbsp;Francisco, May&nbsp;6 · London, May&nbsp;19).
+      </p>
+      <div id="channels" class="channel-chips"></div>
+      <div id="stats" class="stats"></div>
+    </div>
+  </header>
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <div class="wrap toolbar-inner">
+      <label class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="search-input" type="search" placeholder="Search advice, speakers, features…" autocomplete="off" />
+      </label>
+      <div id="chips" class="chips"></div>
+    </div>
+  </div>
+
+  <!-- SYNTHESIS -->
+  <section id="synthesis">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">The synthesis</div>
+        <h2>Nine principles, drawn across every talk</h2>
+        <p>The recurring advice, deduplicated and organized. Each card links to the talks that back it — click a reference to watch.</p>
+      </div>
+      <div id="principles" class="grid principles"></div>
+      <div id="principles-empty" class="empty hidden">No principles match your filter.</div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="library">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">The source talks</div>
+        <h2>Video library</h2>
+        <p>Each official talk with its conclusions and the concrete advice presented. Thumbnails play inline; "Session page" links to Anthropic's own write-up.</p>
+      </div>
+      <div id="videos" class="grid videos"></div>
+      <div id="videos-empty" class="empty hidden">No talks match your filter.</div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section id="methodology" class="method">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">How this was built</div>
+        <h2>Methodology &amp; honest limitations</h2>
+      </div>
+      <div class="note">
+        <strong>Transcripts could not be downloaded verbatim.</strong> This site was built inside a sandbox whose
+        network policy blocks <code>youtube.com</code> and third-party transcript/recap sites (every request returns
+        HTTP&nbsp;403 through an allowlist proxy). So instead of extracting caption files, each talk's
+        <strong>conclusions were reconstructed from web search</strong> over Anthropic's own session pages
+        (claude.com), official blog recaps, and independent reporting/live-blogs. Treat the per-talk bullets as
+        faithful <em>summaries</em>, not word-for-word quotes — and follow each card's "Sources" for the originals.
+      </div>
+      <div class="cols">
+        <div>
+          <h4>Scope &amp; inclusion</h4>
+          <ul>
+            <li>Official channels only: <strong>@anthropic-ai</strong> and <strong>@claude</strong>.</li>
+            <li>Window: ~Apr&nbsp;15 → May&nbsp;27, 2026 (six weeks).</li>
+            <li>Topic filter: must be about <strong>Claude&nbsp;Code</strong> / agentic coding.</li>
+            <li>Third-party tutorials and reaction videos were excluded.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>What's most reliable</h4>
+          <ul>
+            <li>Talk titles, speakers, dates, and session URLs (from claude.com).</li>
+            <li>Headline announcements (Managed Agents, Dreaming/Outcomes/Orchestration).</li>
+            <li>Cross-checked advice that appears in multiple sources.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Run it locally</h4>
+          <ul>
+            <li>It's a static site — open <code>index.html</code> directly, or</li>
+            <li><code>python3 -m http.server 8000</code> then visit <code>localhost:8000</code>.</li>
+            <li>No build step, no dependencies, works offline.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>Claude Code Field Guide · generated <span id="year"></span> · summaries synthesized from public sources</span>
+      <span>Not an official Anthropic product.</span>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="sheet">
+      <iframe id="modal-frame" class="frame" title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="x">
+        <b id="modal-title"></b>
+        <span style="display:flex;gap:8px">
+          <a id="modal-link" class="btn" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
+          <button id="modal-close">Close</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
