@@ -71,12 +71,20 @@
         <h2>Methodology &amp; honest limitations</h2>
       </div>
       <div class="note">
-        <strong>Transcripts could not be downloaded verbatim.</strong> This site was built inside a sandbox whose
-        network policy blocks <code>youtube.com</code> and third-party transcript/recap sites (every request returns
-        HTTP&nbsp;403 through an allowlist proxy). So instead of extracting caption files, each talk's
-        <strong>conclusions were reconstructed from web search</strong> over Anthropic's own session pages
-        (claude.com), official blog recaps, and independent reporting/live-blogs. Treat the per-talk bullets as
-        faithful <em>summaries</em>, not word-for-word quotes — and follow each card's "Sources" for the originals.
+        <strong>How transcript extraction was attempted (and why it's reconstructed).</strong>
+        Verbatim YouTube caption files could not be downloaded from this sandbox. The network policy
+        blocks <code>youtube.com/api/timedtext</code> and every third-party transcript mirror with
+        HTTP&nbsp;403. I then went after YouTube's internal <code>youtubei.googleapis.com</code> API,
+        which <em>is</em> reachable here — but the datacenter session is bot-gated: <code>player</code>
+        returns <code>UNPLAYABLE</code>, <code>get_transcript</code> returns
+        <code>FAILED_PRECONDITION</code>, and the transcript panel is stripped from the
+        <code>next</code> response. Bypassing that needs a <code>po_token</code> minted from Google's
+        BotGuard endpoints, which the proxy also blocks. So each transcript here is a
+        <strong>transcript-grade reconstruction</strong> assembled from Anthropic's own session pages
+        (claude.com), official recaps, and contemporaneous reporting — with <strong>verbatim quotes
+        preserved</strong> where sources reported them word-for-word. Open any talk's
+        <em>Transcript&nbsp;&amp;&nbsp;notes</em> for the full per-talk document, or read the files in
+        <code>/transcripts</code>.
       </div>
       <div class="cols">
         <div>

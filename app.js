@@ -159,10 +159,14 @@
           el("p", { class: "tk-h", text: "Conclusions & advice" }),
           el("ul", { class: "tk" }, v.takeaways.map((t) => el("li", { text: t }))),
           el("div", { class: "themetags" }, v.themes.map((t) => el("span", { class: "tt", text: themeLabel(t) }))),
+          buildTranscript(v),
           buildSources(v),
           el("div", { class: "vfoot" }, [
             el("a", { class: "btn primary", href: v.youtube, target: "_blank", rel: "noopener" }, [
               icon("M8 5v14l11-7z"), "Watch"
+            ]),
+            el("a", { class: "btn", href: v.transcriptFile, target: "_blank", rel: "noopener" }, [
+              icon("M4 4h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"), "Transcript"
             ]),
             v.sessionPage ? el("a", { class: "btn", href: v.sessionPage, target: "_blank", rel: "noopener", text: "Session page" }) : null
           ])
@@ -171,6 +175,20 @@
       box.appendChild(card);
     });
     $("#videos-empty").classList.toggle("hidden", shown > 0);
+  }
+
+  function buildTranscript(v) {
+    const kids = [el("summary", { text: `Transcript & notes${v.quotes.length ? ` · ${v.quotes.length} verbatim quote${v.quotes.length > 1 ? "s" : ""}` : ""}` })];
+    kids.push(el("p", { class: "fidelity", text: "Transcript-grade reconstruction — verbatim YouTube captions were blocked in this environment (see Methodology)." }));
+    if (v.quotes.length) {
+      v.quotes.forEach((q) =>
+        kids.push(el("blockquote", { class: "quote" }, [
+          document.createTextNode("“" + q.text + "”"),
+          el("cite", { text: " — " + q.who })
+        ])));
+    }
+    kids.push(el("a", { class: "tr-open", href: v.transcriptFile, target: "_blank", rel: "noopener", text: "Open full transcript & detailed notes →" }));
+    return el("details", { class: "src transcript" }, kids);
   }
 
   function buildSources(v) {

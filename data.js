@@ -331,4 +331,44 @@ const PRINCIPLES = [
   }
 ];
 
-window.GUIDE = { META, THEMES, VIDEOS, PRINCIPLES };
+/*
+ * Verbatim quotes captured per talk (reported word-for-word by the cited
+ * primary sources), plus a pointer to the full reconstructed transcript file.
+ * Kept separate from VIDEOS so the talk objects above stay readable.
+ */
+const QUOTES = {
+  "GMIWm5y90xA": [
+    { who: "Boris Cherny", text: "Everything we are seeing today still feels magical to me, and I work on Claude Code every day." },
+    { who: "Boris Cherny", text: "Routines are higher-order prompts." },
+    { who: "Keynote", text: "No new model was announced today. Today is about how we are making our products work better for you." }
+  ],
+  "6amLO7I9xdg": [
+    { who: "Boris Cherny", text: "The default isn't 'I'm going to prompt Claude' — the default is now 'I'm going to have Claude prompt itself.'" },
+    { who: "Boris Cherny", text: "Routines are a higher-order prompt. You write the automation. Claude does the prompting." }
+  ],
+  "DlTCu_pNDHE": [
+    { who: "Reported", text: "The GitHub username with the most merged PRs in Bun's repo is now a Claude Code bot." }
+  ]
+};
+
+/* Extraction provenance — surfaced in the UI for full transparency. */
+const EXTRACTION = {
+  method: "InnerTube API probe + web-search reconstruction",
+  verbatimAvailable: false,
+  detail:
+    "YouTube caption endpoints (youtube.com/api/timedtext) and all third-party transcript mirrors " +
+    "return HTTP 403 through this environment's allowlist proxy. The InnerTube host " +
+    "(youtubei.googleapis.com) is reachable, but the datacenter session is bot-gated: player is " +
+    "UNPLAYABLE, get_transcript returns FAILED_PRECONDITION, and the transcript panel is absent — " +
+    "and minting a po_token requires BotGuard endpoints that the proxy also blocks. Transcripts " +
+    "below are therefore transcript-grade reconstructions from Anthropic's own session pages, " +
+    "official recaps, and contemporaneous reporting, with verbatim quotes preserved where reported."
+};
+
+/* Attach transcript file path (by convention) and quotes to each video. */
+VIDEOS.forEach((v) => {
+  v.transcriptFile = `transcripts/${v.id}.md`;
+  v.quotes = QUOTES[v.id] || [];
+});
+
+window.GUIDE = { META, THEMES, VIDEOS, PRINCIPLES, EXTRACTION };
