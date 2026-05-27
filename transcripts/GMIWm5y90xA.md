@@ -39,6 +39,10 @@ development**, where the gap between "I have an idea" and "it runs" is collapsin
 - "Everything we are seeing today still feels magical to me, and I work on Claude Code every day." — Boris Cherny
 - "Routines are higher-order prompts." — Boris Cherny
 - "No new model was announced today. Today is about how we are making our products work better for you."
+- Opening framing (reported): Ami Vora walked onstage and told the room that their AI agents were
+  "about to start dreaming."
+- "Context windows that feel infinite" — Dianne Penn (Head of Product, Research), when combined with
+  high-quality memory. (Cat Wu, Head of Product for Claude Code, also presented.)
 
 ## Conclusions / advice
 1. Treat the model's trajectory as a design input — architect for the next capability jump.

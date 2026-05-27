@@ -35,9 +35,22 @@ type-checkers, build systems) that pushed that distance further out; agents pull
   internal access.
 - **Model progress.** Build for the next jump (Opus 4.7, "Mythos Preview"), not just current limits.
 
+## Verbatim passages (captured via search-indexed sources)
+> "Compilers, typecheckers, build systems — and each layer pushed the distance between 'I have an
+> idea' and 'it runs' a little further out."
+
+> "With agents, that distance is collapsing again: you describe a problem, and the program shows up.
+> It's the calculator feeling, except the calculator can write a distributed system."
+
+> "The default isn't, 'I'm gonna prompt Claude Code,' the default is now, 'I'm gonna have Claude
+> prompt Claude Code.'"
+
 ## Direct quotes
 - "The default isn't 'I'm going to prompt Claude' — the default is now 'I'm going to have Claude prompt itself.'" — Boris Cherny
 - "Routines are a higher-order prompt. You write the automation. Claude does the prompting." — Boris Cherny
+- Origin story: in secondary school Cherny wrote TI-83 programs that solved his math homework and
+  taught himself HTML so his eBay Pokémon-card listings would sell better — learning by tinkering,
+  thrilled whenever something *ran*.
 
 ## Conclusions / advice
 1. Stop thinking in single prompts; design **routines/automations** that let Claude prompt itself.

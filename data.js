@@ -340,10 +340,12 @@ const QUOTES = {
   "GMIWm5y90xA": [
     { who: "Boris Cherny", text: "Everything we are seeing today still feels magical to me, and I work on Claude Code every day." },
     { who: "Boris Cherny", text: "Routines are higher-order prompts." },
-    { who: "Keynote", text: "No new model was announced today. Today is about how we are making our products work better for you." }
+    { who: "Keynote", text: "No new model was announced today. Today is about how we are making our products work better for you." },
+    { who: "Dianne Penn", text: "Context windows that feel infinite — when combined with high-quality memory." }
   ],
   "6amLO7I9xdg": [
-    { who: "Boris Cherny", text: "The default isn't 'I'm going to prompt Claude' — the default is now 'I'm going to have Claude prompt itself.'" },
+    { who: "Boris Cherny", text: "The default isn't, 'I'm gonna prompt Claude Code,' the default is now, 'I'm gonna have Claude prompt Claude Code.'" },
+    { who: "Boris Cherny", text: "With agents, that distance is collapsing again: you describe a problem, and the program shows up. It's the calculator feeling, except the calculator can write a distributed system." },
     { who: "Boris Cherny", text: "Routines are a higher-order prompt. You write the automation. Claude does the prompting." }
   ],
   "DlTCu_pNDHE": [
