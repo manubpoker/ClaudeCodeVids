@@ -25,8 +25,13 @@ A tour of recently shipped Claude Code features many users have missed — heavi
   maintain state across exchanges so you can send instructions incrementally as conditions change.
   The `--channels` permission relay can forward approval prompts to your phone.
 - **Scripting.** `--bare` for clean, scriptable calls.
+- **Auto Mode** moves permission decisions to a **classifier** that screens for destructive actions
+  and prompt injection, keeping human approval for the sensitive ones.
+- **Worktrees.** Claude gets an *enter* and *exit* tool to spin up isolated branches — clean parallel
+  work without polluting your main tree.
 - **Redesigned desktop GUI.** Split views, pin assistant messages as **chapters** with a generated
   table of contents, and inline diff comments.
+- **Doubled 5-hour rate limits** for Pro / Max / Enterprise customers.
 - **Safety rails for autonomy.** Plan Mode, **checkpoints** (`/rewind`, Esc-Esc), subagents, hooks,
   and background tasks combine so you can take on more ambitious work and always rewind.
 - **Context.** Q1 also brought Auto Mode and AutoDream alongside Computer Use improvements.

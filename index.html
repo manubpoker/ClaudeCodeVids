@@ -71,19 +71,33 @@
         <h2>Methodology &amp; honest limitations</h2>
       </div>
       <div class="note">
-        <strong>How transcript extraction was attempted (and why it's reconstructed).</strong>
-        Verbatim YouTube caption files could not be downloaded from this sandbox. The network policy
-        blocks <code>youtube.com/api/timedtext</code> and every third-party transcript mirror with
-        HTTP&nbsp;403. I then went after YouTube's internal <code>youtubei.googleapis.com</code> API,
-        which <em>is</em> reachable here — but the datacenter session is bot-gated: <code>player</code>
-        returns <code>UNPLAYABLE</code>, <code>get_transcript</code> returns
-        <code>FAILED_PRECONDITION</code>, and the transcript panel is stripped from the
-        <code>next</code> response. Bypassing that needs a <code>po_token</code> minted from Google's
-        BotGuard endpoints, which the proxy also blocks. So each transcript here is a
-        <strong>transcript-grade reconstruction</strong> assembled from Anthropic's own session pages
-        (claude.com), official recaps, and contemporaneous reporting — with <strong>verbatim quotes
-        preserved</strong> where sources reported them word-for-word. Open any talk's
-        <em>Transcript&nbsp;&amp;&nbsp;notes</em> for the full per-talk document, or read the files in
+        <strong>How transcript extraction was attempted (and the hard wall I hit).</strong>
+        Verbatim YouTube caption files could not be downloaded from this sandbox. Two independent
+        layers block it:
+        <ol style="margin:8px 0 0 18px;padding:0;color:var(--ink-dim);font-size:13.5px">
+          <li><strong>Proxy allowlist.</strong> Direct fetches to <code>youtube.com/api/timedtext</code>
+            and every transcript mirror (youtubesummary, ulisten, tactiq, notegpt, invidious, piped)
+            return HTTP&nbsp;403. Only <code>github.com</code>, <code>*.googleapis.com</code> and a
+            handful of package mirrors are allowed.</li>
+          <li><strong>YouTube bot-gating on the datacenter IP.</strong> I built a full InnerTube
+            client against <code>youtubei.googleapis.com</code> (which <em>is</em> reachable) and
+            tried every client variant — WEB, MWEB, ANDROID, IOS, TVHTML5-embedded, WEB_EMBEDDED,
+            ANDROID_TESTSUITE, ANDROID_MUSIC, ANDROID_VR, ANDROID_CREATOR, IOS_MUSIC, WEB_CREATOR.
+            For our specific Code-with-Claude videos every client returns
+            <code>LOGIN_REQUIRED</code>: <em>"Sign in to confirm you're not a bot"</em> or
+            <code>ERROR</code>: <em>"This video is unavailable."</em> ANDROID_VR <em>does</em> get
+            <code>status=OK</code> + caption tracks for unrestricted videos (verified against the
+            Rickroll), proving the IP isn't universally gated — these particular videos require an
+            authenticated session. Even when captionTracks come through, their
+            <code>baseUrl</code> still points to <code>www.youtube.com</code>, which the proxy
+            blocks separately.</li>
+        </ol>
+        Bypassing both layers needs (a) a <code>po_token</code> minted from BotGuard endpoints the
+        proxy also blocks, plus (b) a valid Google account cookie. So each transcript here is a
+        <strong>transcript-grade artifact</strong> assembled from Anthropic's own session pages,
+        official recaps, and contemporaneous reporting — with <strong>verbatim quotes preserved</strong>
+        wherever sources reported them word-for-word. Open any talk's
+        <em>Transcript&nbsp;&amp;&nbsp;notes</em> for the full document, or read the files in
         <code>/transcripts</code>.
       </div>
       <div class="cols">

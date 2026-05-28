@@ -87,6 +87,9 @@ const VIDEOS = [
       "Redesigned desktop GUI: split views, pin assistant messages as chapters with a generated table of contents, and inline diff comments.",
       "Async primitives matured: `--bare` for scripted calls and a `--channels` permission relay that forwards approval prompts to your phone.",
       "Dispatch provides managed, observable async task execution (multiple concurrent jobs, real-time event streaming) — unlike a synchronous shell script that gives no structured progress tracking.",
+      "Auto Mode moves permission decisions to a classifier that screens for destructive actions and prompt injection.",
+      "Worktrees: Claude gets an enter/exit tool to spin up isolated branches for clean parallel work.",
+      "Doubled 5-hour rate limits for Pro / Max / Enterprise customers.",
       "Plan Mode, checkpoints (`/rewind`, Esc-Esc), subagents, hooks and background tasks combine to let you take on more ambitious work safely."
     ],
     sources: [
@@ -118,18 +121,19 @@ const VIDEOS = [
     ]
   },
   {
-    id: "sf-the-expanding-toolkit",
+    id: "KLCuxMDZSDg",
     title: "The expanding toolkit",
     channel: "Anthropic",
     date: "2026-05-06",
-    youtube: "https://www.youtube.com/playlist?list=PLmWCw1CzcFim2obQ-w3ohbULOfwp5lApR",
+    youtube: "https://www.youtube.com/watch?v=KLCuxMDZSDg",
     sessionPage: "https://claude.com/code-with-claude/session/sf-the-expanding-toolkit",
-    speakers: ["Anthropic Claude team"],
+    speakers: ["Lucas Gonzalez (Member of Technical Staff, Anthropic)"],
     themes: ["toolkit", "mindset"],
     summary:
       "Walks through how Claude's raw capabilities changed between model generations and how they compose into agents that finish work instead of just starting it.",
     takeaways: [
       "Capabilities that used to need heavy scaffolding now live in the model: reliable tool use, context management, writing/running code, and computer use.",
+      "Two kinds of code, very different shelf-lives: code that compensates for model unreliability has a half-life of months; code that connects the model to your data, auth, tools and proprietary context compounds.",
       "Skills handle code generation and repeatable procedure; MCP servers handle knowledge and access to external systems — they're complementary, not competing.",
       "The win is composition: stack model capabilities + skills + MCP + subagents into agents that drive a task to completion."
     ],
@@ -190,7 +194,7 @@ const VIDEOS = [
     date: "2026-05-06",
     youtube: "https://www.youtube.com/playlist?list=PLmWCw1CzcFim2obQ-w3ohbULOfwp5lApR",
     sessionPage: "https://claude.com/code-with-claude/san-francisco",
-    speakers: ["Anthropic engineering + partners (GitHub, Vercel, Datadog, Cursor, Replit, Bun)"],
+    speakers: ["Nicholas Carlini (Anthropic — anchor write-up)", "Anthropic engineering + partners (GitHub, Vercel, Datadog, Cursor, Replit, Bun)"],
     themes: ["scale", "subagents", "context"],
     summary:
       "The conference's third track covered running Claude Code at scale: long-horizon tasks, multi-repo work, and the infrastructure + parallel agents that make it possible. Anchored by Anthropic's 'C compiler built by parallel Claudes' work.",
@@ -288,7 +292,7 @@ const PRINCIPLES = [
       "Hooks = deterministic enforcement; Subagents = parallelism + context isolation.",
       "Default order: Skills first, then Hooks for enforcement, then Subagents for isolation/parallel work."
     ],
-    videoIds: ["sf-the-expanding-toolkit", "sf-beyond-the-basics-with-claude-code"]
+    videoIds: ["KLCuxMDZSDg", "sf-beyond-the-basics-with-claude-code"]
   },
   {
     id: "p-async",
@@ -327,7 +331,7 @@ const PRINCIPLES = [
       "Architect for where models are going (Opus 4.7 and beyond), not only today's limits — the idea-to-running-software gap keeps shrinking.",
       "As agents out-contribute humans on routine work (see Robobun), your leverage shifts to direction, taste, and review."
     ],
-    videoIds: ["GMIWm5y90xA", "6amLO7I9xdg", "DlTCu_pNDHE", "sf-the-expanding-toolkit"]
+    videoIds: ["GMIWm5y90xA", "6amLO7I9xdg", "DlTCu_pNDHE", "KLCuxMDZSDg"]
   }
 ];
 
@@ -350,6 +354,9 @@ const QUOTES = {
   ],
   "DlTCu_pNDHE": [
     { who: "Reported", text: "The GitHub username with the most merged PRs in Bun's repo is now a Claude Code bot." }
+  ],
+  "KLCuxMDZSDg": [
+    { who: "Lucas Gonzalez", text: "Leave that work to us. We will continue to make Claude more reliable and more capable through this expanding toolkit that comes with the model." }
   ]
 };
 

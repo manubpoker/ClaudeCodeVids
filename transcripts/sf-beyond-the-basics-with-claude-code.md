@@ -15,6 +15,10 @@ Hooks, and Subagents, and when to reach for each.
 - **Skills** — Markdown files (`SKILL.md`) that teach Claude a repeatable workflow. They
   auto-activate when Claude detects relevant context (or run as slash commands). Mental model:
   *macros* — write the procedure once instead of re-pasting a 200-word prompt every time.
+  Configure with YAML frontmatter (`name`, `description`, `disable-model-invocation`,
+  `allowed-tools`). Unlike `CLAUDE.md`, a skill's body **loads only when invoked**, so long
+  reference material costs almost nothing until needed. Worked example: an `explain-code` skill
+  that walks code with diagrams and analogies when a user asks "how does this work?"
 - **Hooks** — deterministic callbacks in `.claude/settings.json` that fire on events and run real
   code. Where `CLAUDE.md` is **advisory** (Claude can "forget" it), hooks are **mandatory** — ideal
   for lint/test/format gates and policy enforcement.

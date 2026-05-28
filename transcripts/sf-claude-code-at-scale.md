@@ -2,7 +2,7 @@
 
 - **Channel:** Anthropic (official) · **Date:** 2026-05-06 (Code w/ Claude SF)
 - **Track / agenda:** https://claude.com/code-with-claude/san-francisco
-- **Anchor write-up:** https://www.anthropic.com/engineering/building-c-compiler
+- **Anchor write-up:** https://www.anthropic.com/engineering/building-c-compiler — by **Nicholas Carlini** (Anthropic)
 - **Speakers:** Anthropic engineering + partners (GitHub, Vercel, Datadog, Cursor, Replit, Bun)
 
 > **Fidelity note.** Not a verbatim caption file (YouTube captions blocked / InnerTube session-gated).
@@ -25,7 +25,9 @@ parallel agents that make it possible.
   checkpoints, and known limitations.
 - **Parallelize with an oracle.** The Linux-kernel bottleneck was broken by using **GCC as an
   online known-good oracle** to diff against, letting each agent fix different bugs in different
-  files in parallel.
+  files in parallel. Concretely: randomly compile **most** of the kernel with GCC and only the
+  remaining files with Claude's compiler — progressively expand Claude's coverage until it can
+  compile everything.
 - **Parallelism enables specialization.** One agent coalesced duplicate code, another improved
   compiler performance, a third focused on efficient codegen.
 - **Orchestration pattern.** A **lead agent** decomposes the job and delegates to **specialist
