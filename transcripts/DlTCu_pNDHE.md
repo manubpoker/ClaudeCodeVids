@@ -29,6 +29,13 @@ using Bun's **"Robobun"** agent as the worked example.
 - "The GitHub username with the most merged PRs in Bun's repo is now a Claude Code bot."
 - Robobun "opens PRs with tests that fail in the earlier system-installed version of Bun before the
   fix and pass in the fixed debug build of Bun. It responds to review comments."
+- Cherny on his own setup (corroborated in his published workflow): *"My setup might be surprisingly
+  vanilla! Claude Code works great out of the box, so I personally don't customize it much. There
+  is no one correct way to use Claude Code: we intentionally build it in a way that you can use it,
+  customize it, and hack it however you like."*
+- His workflow: **run ~5 parallel Claudes in terminal tabs** with system notifications for input
+  alerts; **pair with 5–10 web sessions**; hand off between local / web / mobile for flexibility;
+  prefer **Opus with thinking** even though it's slower.
 
 ## Conclusions / advice
 1. **Gate agent PRs on a failing→passing regression test** — it forces real fixes and makes review trustworthy.

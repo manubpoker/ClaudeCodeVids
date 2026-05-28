@@ -36,6 +36,14 @@ parallel agents that make it possible.
 - **Multi-repo.** Declare which repositories belong to an environment so Claude lands in a
   pre-configured workspace instead of wiring access by hand.
 
+## Direct quotes (from the anchor write-up)
+- *"Time blindness: Claude can't tell time and, left alone, will happily spend hours running tests
+  instead of making progress."* — Nicholas Carlini
+- *"Building this compiler has been some of the most fun I've had recently, but I did not expect
+  this to be anywhere near possible so early in 2026. The rapid progress in both language models and
+  the scaffolds we use to interact with them opens the door to writing an enormous amount of new
+  code."* — Nicholas Carlini
+
 ## Conclusions / advice
 1. **The hard part is the harness, not the prompt** — design tests and progress tracking that keep
    agents honest without a human watching.

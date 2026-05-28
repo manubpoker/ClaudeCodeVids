@@ -104,7 +104,7 @@ const VIDEOS = [
     date: "2026-05-06",
     youtube: "https://www.youtube.com/playlist?list=PLmWCw1CzcFim2obQ-w3ohbULOfwp5lApR",
     sessionPage: "https://claude.com/code-with-claude/session/sf-beyond-the-basics-with-claude-code",
-    speakers: ["Anthropic Claude Code team"],
+    speakers: ["Daisy Hollman (Member of Technical Staff, Anthropic)"],
     themes: ["automate", "subagents", "toolkit", "context"],
     summary:
       "A practical deep-dive into Claude Code's extensibility layer — the difference between Skills, Hooks, and Subagents and when to reach for each.",
@@ -356,11 +356,20 @@ const QUOTES = {
     { who: "Boris Cherny", text: "The person who owns the PR is never going to see a red X." }
   ],
   "DlTCu_pNDHE": [
-    { who: "Reported", text: "The GitHub username with the most merged PRs in Bun's repo is now a Claude Code bot." }
+    { who: "Reported", text: "The GitHub username with the most merged PRs in Bun's repo is now a Claude Code bot." },
+    { who: "Boris Cherny", text: "My setup might be surprisingly vanilla! Claude Code works great out of the box, so I personally don't customize it much. There is no one correct way to use Claude Code." }
   ],
   "sf-whats-new-in-claude-code": [
     { who: "Dickson Tsai", text: "Dispatch lets you assign Claude tasks from your iPhone and return to finished work on your desktop." },
     { who: "Dickson Tsai", text: "My takeaway from CwC: finding the most ergonomic UI for human-agent collaboration." }
+  ],
+  "sf-beyond-the-basics-with-claude-code": [
+    { who: "Daisy Hollman", text: "You should be running agents overnight." },
+    { who: "Daisy Hollman", text: "One of the harder engineering challenges in building agents is choosing the right information to put into a fixed box." }
+  ],
+  "sf-claude-code-at-scale": [
+    { who: "Nicholas Carlini", text: "Time blindness: Claude can't tell time and, left alone, will happily spend hours running tests instead of making progress." },
+    { who: "Nicholas Carlini", text: "Building this compiler has been some of the most fun I've had recently, but I did not expect this to be anywhere near possible so early in 2026. The rapid progress in both language models and the scaffolds we use to interact with them opens the door to writing an enormous amount of new code." }
   ],
   "KLCuxMDZSDg": [
     { who: "Lucas Gonzalez", text: "Leave that work to us. We will continue to make Claude more reliable and more capable through this expanding toolkit that comes with the model." }
