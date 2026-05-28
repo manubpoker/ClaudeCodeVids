@@ -39,10 +39,27 @@ development**, where the gap between "I have an idea" and "it runs" is collapsin
 - "Everything we are seeing today still feels magical to me, and I work on Claude Code every day." — Boris Cherny
 - "Routines are higher-order prompts." — Boris Cherny
 - "No new model was announced today. Today is about how we are making our products work better for you."
+- "Thank you for trusting Claude Code on your production databases back when Sonnet 3.7 was our top model." — Cat Wu (Head of Product, Claude Code)
 - Opening framing (reported): Ami Vora walked onstage and told the room that their AI agents were
   "about to start dreaming."
 - "Context windows that feel infinite" — Dianne Penn (Head of Product, Research), when combined with
-  high-quality memory. (Cat Wu, Head of Product for Claude Code, also presented.)
+  high-quality memory.
+
+## Surface evolution + Code Review
+- Claude Code "started with the CLI, then added an IDE interface, and the latest surface is Claude
+  Code on Desktop."
+- **Code Review** is now launched and "used by every team at Anthropic."
+
+## Managed Agents — mechanics announced
+- **Dreaming**: a scheduled process that reviews past agent sessions, surfaces patterns, and curates
+  memory — so agents improve between runs by pulling recurring mistakes, shared workflows, and team
+  preferences into a more useful memory store.
+- **Multiagent Orchestration**: a lead agent delegates to specialist sub-agents working in parallel
+  on a shared file system, each with its own model, prompt, and tools — the whole flow traceable in
+  the Claude Console.
+- **Outcomes**: developers define a rubric for what "good output" looks like; a separate grader
+  evaluates each result in its own context window and sends the agent back to revise until it meets
+  the bar — **lifting task success by up to 10 points** on the hardest problems on internal benchmarks.
 
 ## Conclusions / advice
 1. Treat the model's trajectory as a design input — architect for the next capability jump.

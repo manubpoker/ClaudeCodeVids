@@ -30,6 +30,7 @@ type-checkers, build systems) that pushed that distance further out; agents pull
   timeout → a Routine triggered → it diagnosed a *known* infra problem → retried the job → green —
   **with no human intervention.** Cherny noted developers increasingly don't even see the error
   messages, because Claude tests and tweaks until it runs.
+- **The framing for Autofix:** *"The person who owns the PR is never going to see a red X."*
 - **Platform direction.** Make production agents cheaper, faster to ship, and more controllable:
   the advisor strategy, Claude Managed Agents, self-hosted sandboxes, and MCP tunnels for secure
   internal access.
@@ -48,6 +49,7 @@ type-checkers, build systems) that pushed that distance further out; agents pull
 ## Direct quotes
 - "The default isn't 'I'm going to prompt Claude' — the default is now 'I'm going to have Claude prompt itself.'" — Boris Cherny
 - "Routines are a higher-order prompt. You write the automation. Claude does the prompting." — Boris Cherny
+- "The person who owns the PR is never going to see a red X." — Boris Cherny (on CI Autofix)
 - Origin story: in secondary school Cherny wrote TI-83 programs that solved his math homework and
   taught himself HTML so his eBay Pokémon-card listings would sell better — learning by tinkering,
   thrilled whenever something *ran*.
