@@ -17,10 +17,11 @@ A tour of recently shipped Claude Code features many users have missed — heavi
 - **Remote Control.** Start a session on one machine (laptop/server/CI) and continue it from your
   phone: you run the command, get a URL, open it in the Claude mobile app, and you're attached to
   the *live* session running on your laptop.
-- **Dispatch.** Managed, observable async task execution. Dispatch a task from your phone; the local
-  desktop agent picks it up, works, and messages you when the result is ready. Unlike a synchronous
-  shell script (no structured progress), Dispatch handles multiple concurrent jobs with real-time
-  event streaming.
+- **Dispatch.** Managed, observable async task execution. As Tsai framed it, *"Dispatch lets you
+  assign Claude tasks from your iPhone and return to finished work on your desktop."* The local
+  desktop agent picks up the task, works on it, and messages you when the result is ready. Unlike a
+  synchronous shell script (no structured progress), Dispatch handles multiple concurrent jobs with
+  real-time event streaming.
 - **Channels.** Persistent, bidirectional pathways between Claude Code and external systems; they
   maintain state across exchanges so you can send instructions incrementally as conditions change.
   The `--channels` permission relay can forward approval prompts to your phone.
@@ -34,7 +35,16 @@ A tour of recently shipped Claude Code features many users have missed — heavi
 - **Doubled 5-hour rate limits** for Pro / Max / Enterprise customers.
 - **Safety rails for autonomy.** Plan Mode, **checkpoints** (`/rewind`, Esc-Esc), subagents, hooks,
   and background tasks combine so you can take on more ambitious work and always rewind.
+- **/debug skill** (Claude Code v2.1.30) — built-in skill for Claude to read your session's debug
+  logs and troubleshoot itself, e.g. `/debug why didn't my hook trigger?` or `/debug why did my
+  tool call fail?`
+- **Browser tabs in Claude Code** — newer release lets you leverage your Claude Code harness
+  improvements (CLIs, plugins) for browsing inside the agent loop.
 - **Context.** Q1 also brought Auto Mode and AutoDream alongside Computer Use improvements.
+
+## Post-conference takeaway
+- Tsai's own summary tweet: "My takeaway from CwC: finding the most ergonomic UI for human-agent
+  collaboration."
 
 ## Conclusions / advice
 1. Adopt **async control** — Remote Control + Dispatch + Channels — so work continues off your desk

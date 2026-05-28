@@ -345,6 +345,7 @@ const QUOTES = {
     { who: "Boris Cherny", text: "Everything we are seeing today still feels magical to me, and I work on Claude Code every day." },
     { who: "Boris Cherny", text: "Routines are higher-order prompts." },
     { who: "Cat Wu", text: "Thank you for trusting Claude Code on your production databases back when Sonnet 3.7 was our top model." },
+    { who: "Cat Wu", text: "I think the next big thing is proactivity. Last year we were in this world of synchronous development. Right now, people are shifting to routines… and the next step is that Claude understands what you work on, and just sets up some of these automations for you." },
     { who: "Keynote", text: "No new model was announced today. Today is about how we are making our products work better for you." },
     { who: "Dianne Penn", text: "Context windows that feel infinite — when combined with high-quality memory." }
   ],
@@ -356,6 +357,10 @@ const QUOTES = {
   ],
   "DlTCu_pNDHE": [
     { who: "Reported", text: "The GitHub username with the most merged PRs in Bun's repo is now a Claude Code bot." }
+  ],
+  "sf-whats-new-in-claude-code": [
+    { who: "Dickson Tsai", text: "Dispatch lets you assign Claude tasks from your iPhone and return to finished work on your desktop." },
+    { who: "Dickson Tsai", text: "My takeaway from CwC: finding the most ergonomic UI for human-agent collaboration." }
   ],
   "KLCuxMDZSDg": [
     { who: "Lucas Gonzalez", text: "Leave that work to us. We will continue to make Claude more reliable and more capable through this expanding toolkit that comes with the model." }

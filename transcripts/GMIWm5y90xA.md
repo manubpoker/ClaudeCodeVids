@@ -40,10 +40,19 @@ development**, where the gap between "I have an idea" and "it runs" is collapsin
 - "Routines are higher-order prompts." — Boris Cherny
 - "No new model was announced today. Today is about how we are making our products work better for you."
 - "Thank you for trusting Claude Code on your production databases back when Sonnet 3.7 was our top model." — Cat Wu (Head of Product, Claude Code)
+- *"I think the next big thing is proactivity. Last year we were in this world of synchronous
+  development. Right now, people are shifting to routines, so like automating, for example,
+  responses to customer support tickets. And I think the next step is that Claude understands what
+  you work on, and just sets up some of these automations for you."* — Cat Wu
 - Opening framing (reported): Ami Vora walked onstage and told the room that their AI agents were
   "about to start dreaming."
 - "Context windows that feel infinite" — Dianne Penn (Head of Product, Research), when combined with
   high-quality memory.
+
+## Growth numbers cited
+- API volume **up 17×** year-on-year (the framing used for specific Opus tiers).
+- Broader platform API volume reported up **~70× YoY** in some accounts.
+- Anthropic *"planned for 10× growth but got 80× annualized in the first quarter of 2026."*
 
 ## Surface evolution + Code Review
 - Claude Code "started with the CLI, then added an IDE interface, and the latest surface is Claude
